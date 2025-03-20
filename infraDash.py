@@ -1264,12 +1264,12 @@ with tab1:
 #     gc.collect()
 #     check_leaks()
 
-import ctypes
+# import ctypes
 
 # # optional deeper cleaning
 # ctypes.CDLL("libc.so.6").malloc_trim(0)
 # import ctypes
-ctypes.windll.kernel32.SetProcessWorkingSetSize(-1, -1)
+# ctypes.windll.kernel32.SetProcessWorkingSetSize(-1, -1)
 # if st.button("Who is holding the memory?"):
 #     gc.collect()
 #     objgraph.show_most_common_types(limit=10)
