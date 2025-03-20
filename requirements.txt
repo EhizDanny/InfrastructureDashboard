@@ -22,3 +22,5 @@ streamlit-vertical-slider==2.5.5
 db==0.1.1
 db-sqlite3
 streamlit-autorefresh==1.0.1
+memory_profiler
+objgraph
