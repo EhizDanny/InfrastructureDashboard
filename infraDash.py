@@ -14,9 +14,9 @@ import shelve
 import signal
 import atexit # defines  an exit function once interpreter stops
 import gc # Garbage collector
-from memory_profiler import profile
-import tracemalloc
-import objgraph
+# from memory_profiler import profile
+# import tracemalloc
+# import objgraph
 
 st.set_page_config(
     page_title = 'InfraObservatory', 
@@ -1253,16 +1253,16 @@ with tab1:
 # del fullData
 
 
-def check_leaks():
-    snapshot = tracemalloc.take_snapshot()
-    top_stats = snapshot.statistics('lineno')
-    st.write("Top memory usage by line:")
-    for stat in top_stats[:20]:
-        st.write(stat)
+# def check_leaks():
+#     snapshot = tracemalloc.take_snapshot()
+#     top_stats = snapshot.statistics('lineno')
+#     st.write("Top memory usage by line:")
+#     for stat in top_stats[:20]:
+#         st.write(stat)
 
-if st.button("Check memory snapshot"):
-    gc.collect()
-    check_leaks()
+# if st.button("Check memory snapshot"):
+#     gc.collect()
+#     check_leaks()
 
 import ctypes
 
